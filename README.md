@@ -11,13 +11,12 @@
 | Standardize | - | removing extra "." from jobs column, replacing "." with "_" in jobs column, replacing extra "_" in education column | - | PowerQuery | find and replace |
 | Standardize | - | capitalize | - | PowerQuery | - |
 | Trim | - | removing extra spaces | - | PowerQuery | - |
-| client | age | - | Type of job | unknowns | - |
-| client | job | - | - | unknowns | - |
-| client | marital | - | Marital status of the customer | unknowns | - |
-| client | education | - | Level of education | unknowns | - |
-| client | default | - | Whether the customer has credit in default (binary; "yes", "no") | unknowns | - |
-| client | housing | - | Whether the customer has a housing loan (binary; "yes", "no") | unknowns | - |
-| client | loan | - | Whether the customer has a personal loan (binary; "yes", "no") | unknowns | - |
+| economic | emp.var.rate | - | Employment variation rate - quarterly indicator | no outliers | - |
+| economic | cons.price.idx | - | Consumer price index - monthly indicator | no outliers - within (92-95) | - |
+| economic | cons.conf.idx | - | Consumer confidence index - monthly indicator | no outliers | - |
+| economic | euribor3m | - | Euribor 3-month rate - daily indicator | no outliers, continuous | - |
+| economic | nr.employed | - | Number of employees - quarterly indicator | no outliers | - |
+| current_campaign | y | - | Target variable: has the client subscribed to a term deposit? (binary; "yes", "no") | subscription status | - |
 | campaign | poutcome | - | Outcome of the previous marketing campaign (e.g., success, failure, non-existent) | unknowns | - |
 | campaign | contact | - | Contact communication type | - | - |
 | campaign | month | - | Last contact month of the year | replacing abbreviations with full | find and replace |
@@ -26,9 +25,12 @@
 | campaign | ? | - | Number of calls performed during this campaign for this client. # of attempts to reach out (current campaign) | assuming if duration = 0, campaign > 0, otherwise error; there can't be a duration if no attempts were even made | likely # of attempts based on pivot table |
 | campaign | pdays | - | Number of days since the client was last contacted from a previous campaign, how long ago was this last interaction (previous campaign) | assuming 999 placeholder signifying no prior contact, some pdays=0 values (this could either mean immediate contact less than a day) | 15 rows with pdays=0, these rows have previous > 0, could remove or mode imputation =999, if replace then pdays=999 and previous 0 (another contradiction) deleting |
 | campaign | previous | - | Number of contacts performed before this campaign for this client. # of attempts to reach out (previous campaign) | assuming if previous = 0 and pdays = 999 means no prior contact at all, assuming if any pdays = 0 and previous !=0 likely an error because if there is no days since last contacted, no there should be no contacts | none |
-| economic | emp.var.rate | - | Employment variation rate - quarterly indicator | no outliers | - |
-| economic | cons.price.idx | - | Consumer price index - monthly indicator | no outliers - within (92-95) | - |
-| economic | cons.conf.idx | - | Consumer confidence index - monthly indicator | no outliers | - |
-| economic | euribor3m | - | Euribor 3-month rate - daily indicator | no outliers, continuous | - |
-| economic | nr.employed | - | Number of employees - quarterly indicator | no outliers | - |
-| current_campaign | y | - | Target variable: has the client subscribed to a term deposit? (binary; "yes", "no") | subscription status | - |
+| client | age | - | Type of job | unknowns | - |
+| client | job | - | - | unknowns | - |
+| client | marital | - | Marital status of the customer | unknowns | - |
+| client | education | - | Level of education | unknowns | - |
+| client | default | - | Whether the customer has credit in default (binary; "yes", "no") | unknowns | - |
+| client | housing | - | Whether the customer has a housing loan (binary; "yes", "no") | unknowns | - |
+| client | loan | - | Whether the customer has a personal loan (binary; "yes", "no") | unknowns | - |
+
+
