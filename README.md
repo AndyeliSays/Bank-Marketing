@@ -5,7 +5,7 @@
 
 | Column Type | Column Names | Issue | Description | Cleaning & Notes | Process |
 |------------|--------------|-------|-------------|-----------------|---------|
-| Duplicates | - | replace "." with "" | 12 rows removed | Remove Duplicate Function | - |
+| Duplicates | - | replace "." with "_" | 12 rows removed | Remove Duplicate Function | - |
 | Nulls | - | - | no missing values/noise | - | - |
 | Typecast | - | - | - | - | - |
 | Standardize | - | removing extra "." from jobs column, replacing "." with "_" in jobs column, replacing extra "_" in education column | - | PowerQuery | find and replace |
