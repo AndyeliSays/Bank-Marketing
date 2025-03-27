@@ -5,12 +5,6 @@
 
 | Column Type | Column Names | Issue | Description | Cleaning & Notes | Process |
 |------------|--------------|-------|-------------|-----------------|---------|
-| Duplicates | - | replace "." with "_" | 12 rows removed | Remove Duplicate Function | - |
-| Nulls | - | - | no missing values/noise | - | - |
-| Typecast | - | - | - | - | - |
-| Standardize | - | removing extra "." from jobs column, replacing "." with "_" in jobs column, replacing extra "_" in education column | - | PowerQuery | find and replace |
-| Standardize | - | capitalize | - | PowerQuery | - |
-| Trim | - | removing extra spaces | - | PowerQuery | - |
 | economic | emp.var.rate | - | Employment variation rate - quarterly indicator | no outliers | - |
 | economic | cons.price.idx | - | Consumer price index - monthly indicator | no outliers - within (92-95) | - |
 | economic | cons.conf.idx | - | Consumer confidence index - monthly indicator | no outliers | - |
@@ -32,5 +26,11 @@
 | client | default | - | Whether the customer has credit in default (binary; "yes", "no") | unknowns | - |
 | client | housing | - | Whether the customer has a housing loan (binary; "yes", "no") | unknowns | - |
 | client | loan | - | Whether the customer has a personal loan (binary; "yes", "no") | unknowns | - |
+| Duplicates | - | replace "." with "_" | 12 rows removed | Remove Duplicate Function | - |
+| Nulls | - | - | no missing values/noise | - | - |
+| Typecast | - | - | - | - | - |
+| Standardize | - | removing extra "." from jobs column, replacing "." with "_" in jobs column, replacing extra "_" in education column | - | PowerQuery | find and replace |
+| Standardize | - | capitalize | - | PowerQuery | - |
+| Trim | - | removing extra spaces | - | PowerQuery | - |
 
 
